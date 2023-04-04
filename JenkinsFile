@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                cd /src
+                cd src
                 javac HelloWorld.java
                 java HellWorld
                  echo "This is Deploy step"
