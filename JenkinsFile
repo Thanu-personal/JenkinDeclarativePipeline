@@ -1,23 +1,20 @@
-pipeline{
-    agent any
-        stages{
-            stage('Clone'){
-                steps{
-                    // Git clone 
-                    echo "Clone from git repository"
-                }
-                stage('Build'){
-                    // run mvn build
-                    echo "Run maven build"
-                }
-                stage('Test'){
-                    // Perform test 
-                    echo "Perform Junit Tests"
-                }
-                stage('Deploy'){
-                    // Deploy application in to remote server
-                    echo "Deploy app into remote server"
-                }
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo "This is build step"
+            }
+        }
+        stage('Test') { 
+            steps {
+                 echo "This is Test step"
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                 echo "This is Deploy step"
             }
         }
     }
+}
